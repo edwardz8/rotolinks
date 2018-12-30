@@ -1,13 +1,13 @@
 <template>
   <div id="shop">
     <b-jumbotron header="Welcome to Vue Shop">
-      <p>You won't be able to purchase anything just yet but have a look around. Sign up for updates below!</p>
 
-      <b-form-input></b-form-input>
+      <form class="search-bar" v-on:submit.prevent="onSubmit">
+        <input type="text" class="search-input" placeholder="Search for products">
+        <input type="submit" value="Search" class="btn">
+      </form>
 
-      <div class="btn-group">
-        <b-button>Sign Up</b-button>
-      </div>
+      
     </b-jumbotron>
 
     <b-container>
@@ -27,14 +27,17 @@
             <h2>Shopping Cart</h2>
 
             <b-list-group v-for="item in cart" v-bind:key="item.id">
-              <b-list-group-item button class="shop-item-btn">{{ item.title }}</b-list-group-item>
+              <b-list-group-item class="shop-item-btn flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">{{ item.title }}</h5>
+                  <small>{{ item.qty}}</small>
+                </div>
+                <small class="price">{{ item.price }}</small>
+              </b-list-group-item>
             </b-list-group>
 
-            <div>Total: {{ total }}</div>
-
-            <div>
-              No items in your cart.
-            </div>
+            <div v-if="cart.length">Total: {{ total }}</div>
+            <div v-else>No items in your cart.</div>
           </div>
         </b-col>
       </b-row>
@@ -59,8 +62,30 @@ export default {
   methods: {
     addToCart: function(product) {
       this.total += product.price;
-      this.cart.push(product);
+      var found = false;
+      for (var i = 0; i < this.cart.length; i++) {
+        if (this.cart[i].id === product.id) {
+          this.cart[i].qty++;
+          found = true;
+        }
+      }
+      if (!found) {
+        this.cart.push({
+          id: product.id,
+          title: product.title,
+          price: product.price,
+          qty: 1
+        });
+      }
+    },
+    onSubmit: function() {
+      console.log("search");
     }
+    /*  filters: {
+      currency: function(price) {
+        return "$".concat(price.tofixed(2));
+      } 
+    } */
   }
 };
 </script>
@@ -82,6 +107,14 @@ export default {
 
 .shop-item-btn {
   border: none;
+}
+
+.price {
+  float: left;
+}
+
+.search-input {
+  color: blue;
 }
 
 a {
