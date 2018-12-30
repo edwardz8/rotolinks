@@ -35,6 +35,6 @@ export default {
 }
 
 a {
-  color: #35495e;
+  color: #464d55;
 }
 </style>

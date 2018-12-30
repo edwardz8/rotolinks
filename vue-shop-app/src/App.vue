@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header>
-      <span>Vue PWA Shop</span>
+      <span>Basebook Components App</span>
     </header>
     <main>
 
@@ -37,7 +37,7 @@ header {
   margin: 0;
   height: 56px;
   padding: 0 16px 0 24px;
-  background-color: #35495E;
+  background-color: #629a92;
   color: #ffffff;
 }
 

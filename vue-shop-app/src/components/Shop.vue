@@ -3,7 +3,7 @@
     <b-jumbotron header="Welcome to Vue Shop">
 
       <form class="search-bar" v-on:submit.prevent="onSubmit">
-        <input type="text" class="search-input" placeholder="Search for products">
+        <input type="text" v-model="search" class="search-input" placeholder="Search for products" required>
         <input type="submit" value="Search" class="btn">
       </form>
 
@@ -56,7 +56,8 @@ export default {
         { title: "Product Two", id: 2, price: 9.99 },
         { title: "Product Three", id: 3, price: 9.99 }
       ],
-      cart: []
+      cart: [],
+      search: ''
     };
   },
   methods: {
