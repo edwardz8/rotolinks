@@ -23,7 +23,7 @@
         </b-col>
         <b-col cols="6" md="4" id="queue-col">
           <div id="queue">
-            <h2>Your Favorite Plays</h2>
+            <h2>Favorite Plays of Day</h2>
 
             <b-list-group v-for="item in queue" v-bind:key="item.id">
               <b-list-group-item class="shop-item-btn flex-column align-items-start">
@@ -37,7 +37,7 @@
               </b-list-group-item>
             </b-list-group>
 
-            <div v-if="queue.length"></div>
+            <div v-if="queue.length"><b-button>Save</b-button></div>
             <div v-else>No Favorite Plays</div>
           </div>
         </b-col>

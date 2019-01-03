@@ -1,18 +1,20 @@
 <template>
   <div id="app">
-    <header>
-      <span>Basebook Components App</span>
-    </header>
+    <navbar-home></navbar-home>
     <main>
-
       <router-view></router-view>
     </main>
   </div>
 </template>
 
 <script>
+import Navbar from './components/Navbar'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    'navbar-home': Navbar
+  }
 }
 </script>
 
@@ -22,7 +24,7 @@ body {
 }
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Hind', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
@@ -30,25 +32,7 @@ body {
 
 main {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
-header {
-  margin: 0;
-  height: 56px;
-  padding: 0 16px 0 24px;
-  background-color: #629a92;
-  color: #ffffff;
-}
-
-header span {
-  display: block;
-  position: relative;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: .02em;
-  font-weight: 400;
-  box-sizing: border-box;
-  padding-top: 16px;
-}
 </style>
