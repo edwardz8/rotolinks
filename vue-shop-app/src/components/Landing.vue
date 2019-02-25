@@ -2,6 +2,7 @@
   <div id="landing">
     <div class="head">
      <router-link to="/players" class="button">View Players</router-link>
+      <b-img class="phone" src="/static/img/assets/white-phone.png" fluid alt="baseball dfs phone" />
     </div>
     <div class="body">
     </div>
@@ -31,6 +32,13 @@ export default {
   position: absolute;
   left: 6rem;
   bottom: 18rem;
+}
+
+.phone {
+  position: absolute;
+  top: 10rem;
+  height: 30rem;
+  width: 30rem;
 }
 
 #landing {

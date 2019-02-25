@@ -6,8 +6,8 @@
         <b-navbar-brand>Basebook App</b-navbar-brand>
       </router-link>
 
-      <router-link to="/create-league">
-       <b-nav-text class="create-league">Create League</b-nav-text>
+      <router-link to="/list">
+       <b-nav-text class="list">List</b-nav-text>
       </router-link>
 
       <b-collapse is-nav id="nav_text_collapse">
@@ -45,7 +45,7 @@ a.button {
   text-decoration: none;
 }
 
-.create-league {
+.list {
     color: white;
 }
 </style>

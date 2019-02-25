@@ -4,7 +4,7 @@ import Shop from '@/components/Shop'
 import Landing from '@/components/Landing'
 import Players from '@/components/Players'
 import Register from '@/components/Register'
-import CreateLeague from '@/components/CreateLeague'
+import List from '@/components/List'
 
 Vue.use(Router)
 
@@ -30,9 +30,9 @@ export default new Router({
       component: Shop
     },
     {
-      path: '/create-league',
-      name: 'create-league',
-      component: CreateLeague
+      path: '/list',
+      name: 'list',
+      component: List
     }
   ]
 })

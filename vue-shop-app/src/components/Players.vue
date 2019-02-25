@@ -16,7 +16,7 @@
                     <p>{{ player.pos }}</p>
                   </div>
                 </div>
-                <b-button @click="addToQueue(player)">Add to Queue</b-button>
+                <b-button @click="addToQueue(player)">Add to Watch</b-button>
               </b-card>
             </div>
           </div>
@@ -158,7 +158,12 @@ export default {
 .card {
   margin: 1rem;
   width: 23rem;
+  background-color: #f1f1f1;
 }
+.card:hover {
+  background-color: white;
+}
+
 
 .card-info {
   display: flex;
