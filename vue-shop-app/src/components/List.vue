@@ -1,9 +1,9 @@
 <template>
   <div id="list">
     <b-container class="bv-example-row">
-      <ul v-if="players">
+      <ul>
         <li>
-          <p>{{players.name}}</p>
+          <p></p>
         </li>
       </ul>
        
@@ -22,7 +22,7 @@ export default {
     }
   },
 created() {
-  axios.get(`https://mlb18.theshownation.com/api/v1/listings.json`)
+  axios.get(``)
   .then(response => {
     this.players = response.data
   })

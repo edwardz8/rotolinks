@@ -7,29 +7,29 @@
             <div v-for="player in players" v-bind:key="player.id">
               <b-card class="card">
                 <div class="card-info">
-                  <i class="bbclub-atl bb-2x"></i>
-                  <div>
+                  <b-img class="player-profile" :src="player.img" fluid alt="golf" />
+                  <div class="main-card-content">
                     <h4>{{ player.name }}</h4>
-                    <p>{{ player.team }}</p>
+                    <p>WGR: {{ player.rank }}</p>
                   </div>
                   <div>
-                    <p>{{ player.pos }}</p>
+                    <i class="fas fa-redo"></i>
                   </div>
                 </div>
-                <b-button @click="addToQueue(player)">Add to Watch</b-button>
+                <b-button @click="addToQueue(player)" class="add">Add to Play</b-button>
               </b-card>
             </div>
           </div>
         </b-col>
         <b-col cols="6" md="4" id="queue-col">
           <div id="queue">
-            <h2>Favorite Plays of Day</h2>
+            <h2>Draft Queue</h2>
 
             <b-list-group v-for="item in queue" v-bind:key="item.id">
               <b-list-group-item class="shop-item-btn flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-between">
                   <div class="chip">
-                    <i class="bbclub-atl bb"></i>
+                     <b-img class="player-profile-added" :src="item.img" fluid alt="golf" />
                     <span class="chip-name">{{ item.name }}</span>
                     <span class="close-btn" @click="removeItem(item)">x</span>
                   </div>
@@ -54,74 +54,32 @@ export default {
       total: 0,
       players: [
         {
-          name: "Freddie Freeman",
+          name: "Brooks Koepka",
           id: 1,
-          pos: "1B",
-          bt: "L",
-          team: "Atlanta Braves"
+          country: "",
+          rank: "4",
+          img: '/static/img/assets/brooks_koepka.svg'
         },
         {
-          name: "Ronald Acuna Jr.",
+          name: "Tiger Woods",
           id: 2,
-          pos: "OF",
-          bt: "R",
-          team: "Atlanta Braves"
+          country: "",
+          rank: "4",
+          img: '/static/img/assets/tiger_woods.svg'
         },
         {
-          name: "Ozzie Albies",
+          name: "Justin Thomas",
           id: 3,
-          pos: "2B",
-          bt: "S",
-          team: "Atlanta Braves"
+          country: "",
+          rank: "4",
+          img: '/static/img/assets/justin_thomas.svg'
         },
         {
-          name: "Josh Donaldson",
+          name: "Tommy Fleetwood",
           id: 4,
-          pos: "3B",
-          bt: "R",
-          team: "Atlanta Braves"
-        },
-        {
-          name: "Charlie Culberson",
-          id: 5,
-          pos: "SS/2B",
-          bt: "S",
-          team: "Atlanta Braves"
-        },
-        {
-          name: "Ender Inciarte",
-          id: 6,
-          pos: "OF",
-          bt: "L",
-          team: "Atlanta Braves"
-        },
-        {
-          name: "Mike Foltynewicz",
-          id: 7,
-          pos: "SP",
-          bt: "R",
-          team: "Atlanta Braves"
-        },
-        {
-          name: "Sean Newcomb",
-          id: 8,
-          pos: "SP",
-          bt: "L",
-          team: "Atlanta Braves"
-        },
-        {
-          name: "Julio Teheran",
-          id: 9,
-          pos: "SP",
-          bt: "R",
-          team: "Atlanta Braves"
-        },
-        {
-          name: "Johan Camargo",
-          id: 10,
-          pos: "3B",
-          bt: "S",
-          team: "Atlanta Braves"
+          country: "",
+          rank: "4",
+          img: '/static/img/assets/tommy_fleetwood.svg'
         }
       ],
       queue: [],
@@ -141,6 +99,7 @@ export default {
       if (!found) {
         this.queue.push({
           id: player.id,
+          img: player.img,
           name: player.name,
           price: player.price
         });
@@ -155,15 +114,32 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.add {
+  margin-left: 7rem;
+}
+
 .card {
   margin: 1rem;
-  width: 23rem;
+  width: 26rem;
   background-color: #f1f1f1;
 }
 .card:hover {
   background-color: white;
 }
 
+.player-profile {
+  height: 8rem;
+  width: 8rem;
+}
+
+.player-profile-added {
+  height: 3rem;
+  width: 3rem;
+}
+
+.main-card-content {
+  margin-top: 2rem;
+}
 
 .card-info {
   display: flex;

@@ -3,7 +3,7 @@
     <b-navbar class="navbar" toggleable>
       <b-navbar-toggle target="nav_text_collapse"></b-navbar-toggle>
       <router-link to="/">
-        <b-navbar-brand>Basebook App</b-navbar-brand>
+        <b-navbar-brand>RotoLinks</b-navbar-brand>
       </router-link>
 
       <router-link to="/list">
