@@ -1,8 +1,8 @@
 <template>
   <div id="landing">
     <div class="head">
-     <router-link to="/players" class="button">View Players</router-link>
-      <b-img class="phone" src="/static/img/assets/white-phone.png" fluid alt="baseball dfs phone" />
+     <router-link to="/draft" class="button">Enter Draft Lobby</router-link>
+      <b-img class="phone" src="/static/img/assets/putt_transparent.gif" fluid alt="baseball dfs phone" />
     </div>
     <div class="body">
     </div>
@@ -63,5 +63,11 @@ export default {
 
 a {
   color: #464d55;
+}
+
+@media only screen and (max-width: 900px) {
+  .phone {
+    display: none;
+  }
 }
 </style>

@@ -4,7 +4,7 @@ import Shop from '@/components/Shop'
 import Landing from '@/components/Landing'
 import Players from '@/components/Players'
 import Register from '@/components/Register'
-import List from '@/components/List'
+import Draft from '@/components/Draft'
 
 Vue.use(Router)
 
@@ -30,9 +30,9 @@ export default new Router({
       component: Shop
     },
     {
-      path: '/list',
-      name: 'list',
-      component: List
+      path: '/draft',
+      name: 'draft',
+      component: Draft
     }
   ]
 })

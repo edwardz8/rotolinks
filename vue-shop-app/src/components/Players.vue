@@ -1,13 +1,13 @@
 <template>
-  <div id="players">
+  <div>
     <b-container>
       <b-row>
         <b-col cols="12" md="8">
-          <div id="players">
+          <div>
             <div v-for="player in players" v-bind:key="player.id">
               <b-card class="card">
                 <div class="card-info">
-                  <b-img class="player-profile" :src="player.img" fluid alt="golf" />
+                  <b-img class="player-profile" :src="player.img" fluid alt="golf"/>
                   <div class="main-card-content">
                     <h4>{{ player.name }}</h4>
                     <p>WGR: {{ player.rank }}</p>
@@ -29,7 +29,7 @@
               <b-list-group-item class="shop-item-btn flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-between">
                   <div class="chip">
-                     <b-img class="player-profile-added" :src="item.img" fluid alt="golf" />
+                    <b-img class="player-profile-added" :src="item.img" fluid alt="golf"/>
                     <span class="chip-name">{{ item.name }}</span>
                     <span class="close-btn" @click="removeItem(item)">x</span>
                   </div>
@@ -37,7 +37,9 @@
               </b-list-group-item>
             </b-list-group>
 
-            <div v-if="queue.length"><b-button>Save</b-button></div>
+            <div v-if="queue.length">
+              <b-button>Draft Team</b-button>
+            </div>
             <div v-else>No Favorite Plays</div>
           </div>
         </b-col>
@@ -54,32 +56,67 @@ export default {
       total: 0,
       players: [
         {
-          name: "Brooks Koepka",
-          id: 1,
-          country: "",
-          rank: "4",
-          img: '/static/img/assets/brooks_koepka.svg'
-        },
-        {
           name: "Tiger Woods",
           id: 2,
           country: "",
           rank: "4",
-          img: '/static/img/assets/tiger_woods.svg'
+          img: "/static/img/assets/tiger_woods.svg"
         },
         {
           name: "Justin Thomas",
           id: 3,
           country: "",
           rank: "4",
-          img: '/static/img/assets/justin_thomas.svg'
+          img: "/static/img/assets/justin_thomas.svg"
+        },
+        {
+          name: "Dustin Johnson",
+          id: 6,
+          country: "",
+          rank: "1",
+          img: "/static/img/assets/dustin_johnson.svg"
         },
         {
           name: "Tommy Fleetwood",
           id: 4,
           country: "",
           rank: "4",
-          img: '/static/img/assets/tommy_fleetwood.svg'
+          img: "/static/img/assets/tommy_fleetwood.svg"
+        },
+        {
+          name: "Rory McIlroy",
+          id: 8,
+          country: "",
+          rank: "6",
+          img: "/static/img/assets/rory_mcilroy.svg"
+        },
+        {
+          name: "Justin Rose",
+          id: 7,
+          country: "",
+          rank: "17",
+          img: "/static/img/assets/justin_rose.svg"
+        },
+        {
+          name: "Brooks Koepka",
+          id: 1,
+          country: "",
+          rank: "4",
+          img: "/static/img/assets/brooks_koepka.svg"
+        },
+        {
+          name: "Jon Rahm",
+          id: 8,
+          country: "",
+          rank: "10",
+          img: "/static/img/assets/jon_rahm.svg"
+        },
+        {
+          name: "Sergio Garcia",
+          id: 5,
+          country: "",
+          rank: "17",
+          img: "/static/img/assets/sergio_garcia.svg"
         }
       ],
       queue: [],

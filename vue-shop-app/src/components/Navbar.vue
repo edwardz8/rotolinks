@@ -6,8 +6,8 @@
         <b-navbar-brand>RotoLinks</b-navbar-brand>
       </router-link>
 
-      <router-link to="/list">
-       <b-nav-text class="list">List</b-nav-text>
+      <router-link to="/draft">
+       <b-nav-text class="list">Draft Lobby</b-nav-text>
       </router-link>
 
       <b-collapse is-nav id="nav_text_collapse">
