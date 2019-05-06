@@ -50,7 +50,7 @@
 
 <script>
 export default {
-  name: "landing",
+  name: "players",
   data() {
     return {
       total: 0,

@@ -1,17 +1,41 @@
 <template>
-  <div id="landing">
-    <div class="head">
+  
+     <section>
+    <div>
+      <div class="logo"> 
+      <logo/>
+      </div>
+      <h1 class="title">
+        rotolinks
+      </h1>
+      <h2 class="subtitle">
+        fantasy golf draft app
+      </h2>
+      <div class="links">
+         <router-link to="/draft">
+                 <b-button>Draft Lobby</b-button>
+         </router-link>
+      </div>
+    </div>
+  </section>
+
+    <!-- <div class="head">
      <router-link to="/draft" class="button">Enter Draft Lobby</router-link>
-      <b-img class="phone" src="/static/img/assets/putt_transparent.gif" fluid alt="baseball dfs phone" />
+      <b-img class="phone" src="/static/img/assets/golf-v3.gif" fluid />
     </div>
     <div class="body">
-    </div>
-  </div>
+    </div> -->
 </template>
 
+
 <script>
+import Logo from '../components/Logo.vue'
+
 export default {
   name: 'landing',
+  components: {
+    Logo
+  },
   methods: {
   }
 };
@@ -19,8 +43,42 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.title {
+  font-weight: 300;
+  font-size: 50px;
+  color: #28ffb7;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 1rem;
+  padding: 15px;
+}
+.logo {
+  margin: auto;
+  width: 50%;
+}
+.subtitle {
+  font-weight: 300;
+  font-size: 20px;
+  color: #4a86fd;
+  word-spacing: 5px;
+  padding: 15px;
+}
 
-.button {
+.links {
+  padding-top: 8px;
+  margin: auto;
+  width: 50%;
+}
+
+
+/* .button {
   color: #629a92;
   text-decoration: none;
   border: solid white .1rem;
@@ -41,11 +99,7 @@ export default {
   width: 30rem;
 }
 
-#landing {
-  margin-top: -2.5rem;
-}
-
-.head {
+ .head {
   width: 100%;
   height: 800px;
   background: radial-gradient(
@@ -69,5 +123,5 @@ a {
   .phone {
     display: none;
   }
-}
+} */
 </style>

@@ -2,7 +2,7 @@
   <div id="register">
     <b-form @submit="onSubmit" @reset="onReset" v-if="show" class="form">
 
-      <i class="fas fa-baseball-ball" style="font-size: 28px"></i>
+      <!-- <i class="fas fa-baseball-ball" style="font-size: 28px"></i> -->
 
       <b-form-group
         id="exampleInputGroup1"

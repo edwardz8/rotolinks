@@ -24,15 +24,10 @@ body {
 }
 
 #app {
-  font-family: 'Hind', sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-}
-
-main {
-  text-align: center;
-  margin-top: 30px;
 }
 
 </style>

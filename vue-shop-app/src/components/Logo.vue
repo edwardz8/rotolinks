@@ -1,54 +1,26 @@
 <template>
-  <div id="navbar">
-    <b-navbar class="navbar" toggleable>
-      <b-navbar-toggle target="nav_text_collapse"></b-navbar-toggle>
-      <router-link to="/">
-        <logo/>
-      </router-link>
-
-      <router-link to="/draft">
-       <b-nav-text class="list">Register</b-nav-text>
-      </router-link>      
-    </b-navbar>
+  <div>
+     <div class="title_wrapper">
+        <div class="alfa-title big">
+          <div class="r"></div>
+        </div>
+        <div class="alfa-title big">
+          <div class="l"></div>
+        </div>
+        </div>
   </div>
 </template>
 
 <script>
-import Logo from '../components/Logo.vue'
-
 export default {
-  name: 'navbar',
   components: {
-    Logo
+    name: 'Logo'
   }
-};
+}
 </script>
 
-<style scoped>
-.navbar {
-  background-color: #696969;
-}
-
-.button {
-  color: #629a92;
-  text-decoration: none;
-  border: solid white 0.1rem;
-  background-color: white;
-  padding: 0.4rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  border-radius: 1.5rem;
-}
-
-a.button {
-  text-decoration: none;
-}
-
-.list {
-    color: white;
-}
+<style>
 /* rl logo styles */
-
 .l:before{
   position: absolute;
   content: "";
@@ -99,10 +71,11 @@ a.button {
     margin: 0 auto;
   }
 }
-@media (min-width:768px) {
+@media (min-width:80px) {
   .title_wrapper{
     width: 200px;
     margin: 0 auto;
   }
 }
+
 </style>
