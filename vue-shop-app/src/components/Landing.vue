@@ -36,6 +36,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+ @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+ html, body {
+   font-family: 'Roboto', sans-serif;
+ }
 section {
   min-height: 100vh;
   display: flex;
