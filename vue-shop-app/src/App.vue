@@ -8,26 +8,27 @@
 </template>
 
 <script>
-import Navbar from './components/Navbar'
+import Navbar from "./components/Navbar";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    'navbar-home': Navbar
+    "navbar-home": Navbar
   }
-}
+};
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
 body {
   margin: 0;
 }
 
 #app {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
-
 </style>

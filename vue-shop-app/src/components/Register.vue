@@ -2,27 +2,25 @@
   <div id="register">
     <b-form @submit="onSubmit" @reset="onReset" v-if="show" class="form">
 
-      <!-- <i class="fas fa-baseball-ball" style="font-size: 28px"></i> -->
-
       <b-form-group
-        id="exampleInputGroup1"
+        id="email"
         label="Email address:"
-        label-for="exampleInput1">
-        <b-form-input
-          id="exampleInput1"
+        label-for="email">
+        <input
+          id="email"
           type="email"
           v-model="form.email"
           required
-          placeholder="Enter email"></b-form-input>
+          placeholder="Enter email">
       </b-form-group>
-      <b-form-group id="exampleInputGroup2" label="Your Name:" label-for="exampleInput2">
-        <b-form-input
-          id="exampleInput2"
+      <b-form-group id="password" label="Your Name:" label-for="password">
+        <input
+          id="password"
           type="text"
           v-model="form.name"
           required
           placeholder="Enter name"
-        ></b-form-input>
+        >
       </b-form-group>
     </b-form>
   </div>

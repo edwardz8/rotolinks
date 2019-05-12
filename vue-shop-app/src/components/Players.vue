@@ -1,50 +1,49 @@
 <template>
-  <div>
-    <b-container>
-      <b-row>
-        <b-col cols="12" md="8">
-          <div>
-            <div v-for="player in players" v-bind:key="player.id">
-              <b-card class="card">
-                <div class="card-info">
-                  <b-img class="player-profile" :src="player.img" fluid alt="golf"/>
-                  <div class="main-card-content">
-                    <h4>{{ player.name }}</h4>
-                    <p>WGR: {{ player.rank }}</p>
-                  </div>
-                  <div>
-                    <i class="fas fa-redo"></i>
-                  </div>
-                </div>
-                <b-button @click="addToQueue(player)" class="add">Add to Play</b-button>
-              </b-card>
-            </div>
-          </div>
-        </b-col>
-        <b-col cols="6" md="4" id="queue-col">
-          <div id="queue">
-            <h2>Draft Queue</h2>
+  <div class="md-layout container">
+    <div class="md-layout-item">
+      <div v-for="player in players" v-bind:key="player.id">
+        <md-card class="card" md-with-hover>
+          <md-card-header>
+            <md-card-media md-big>
+              <img :src="player.img" height="12rem">
+            </md-card-media>
 
-            <b-list-group v-for="item in queue" v-bind:key="item.id">
-              <b-list-group-item class="shop-item-btn flex-column align-items-start">
-                <div class="d-flex w-100 justify-content-between">
-                  <div class="chip">
-                    <b-img class="player-profile-added" :src="item.img" fluid alt="golf"/>
-                    <span class="chip-name">{{ item.name }}</span>
-                    <span class="close-btn" @click="removeItem(item)">x</span>
-                  </div>
-                </div>
-              </b-list-group-item>
-            </b-list-group>
+            <md-card-header-text>
+              <div class="md-title">{{player.name}}</div>
+              <div class="md-subhead">WGR: {{player.rank}}</div>
+              <md-icon class="md-accent">trending_up</md-icon>
+            </md-card-header-text>
+          </md-card-header>
 
-            <div v-if="queue.length">
-              <b-button>Draft Team</b-button>
+          <md-card-actions class="actions">
+            <md-button class="md-raised md-primary" @click="addToQueue(player)">Add to Play</md-button>
+          </md-card-actions>
+        </md-card>
+      </div>
+    </div>
+    <!-- Right Column -->
+    <div class="md-layout-item col-right">
+      <div class="queue">
+        <h2>Draft Queue</h2>
+
+        <md-list v-for="item in queue" v-bind:key="item.id" class="md-primary list">
+          <md-list-item>
+            <div>
+            <md-avatar class="md-large">
+            <img :src="item.img" >
+            </md-avatar>
+            <span >{{ item.name }}</span>
             </div>
-            <div v-else>No Favorite Plays</div>
-          </div>
-        </b-col>
-      </b-row>
-    </b-container>
+            <span @click="removeItem(item)" class="x">x</span>
+          </md-list-item>
+        </md-list>
+
+        <div v-if="queue.length">
+          <md-button class="md-raised md-accent">Draft Team</md-button>
+        </div>
+        <div v-else class="plays">No Favorite Plays</div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -151,85 +150,26 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.add {
-  margin-left: 7rem;
-}
-
 .card {
   margin: 1rem;
-  width: 26rem;
-  background-color: #f1f1f1;
 }
 .card:hover {
-  background-color: white;
+  background-color: #696969;
 }
-
-.player-profile {
-  height: 8rem;
-  width: 8rem;
+.queue {
+  text-align: center;
 }
-
-.player-profile-added {
-  height: 3rem;
-  width: 3rem;
+.list {
+  margin: 2rem;
 }
-
-.main-card-content {
-  margin-top: 2rem;
-}
-
-.card-info {
-  display: flex;
-  justify-content: space-around;
-}
-
-.chip-name {
-  margin-left: 1rem;
-}
-
-#queue {
-  position: sticky;
-  right: 5rem;
-  top: 5rem;
-}
-
-.shop-item-btn {
-  border: none;
-}
-
-.chip {
-  display: inline-block;
-  padding: 0 10px;
-  height: 50px;
-  width: 250px;
-  min-width: 210px;
-  line-height: 50px;
-  border-radius: 25px;
-  background-color: #f1f1f1;
-}
-
-.chip i {
-  height: 50px;
-  width: 250px;
-  margin-left: -40px;
-  border-radius: 50%;
-}
-
-.bb {
-  padding-left: 1rem;
-}
-
-.close-btn {
-  color: #888;
-  font-weight: bold;
-  float: right;
-  font-size: 20px;
+.x {
   cursor: pointer;
-  border: none;
-  padding-right: 1rem;
+  color: #64dd17;
 }
-
-.closebtn:hover {
-  color: #000;
+h2, .plays {
+  color: white;
+}
+.col-right {
+  position: sticky;
 }
 </style>

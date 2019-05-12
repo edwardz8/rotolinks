@@ -1,108 +1,42 @@
 <template>
-  <div id="navbar">
-    <b-navbar class="navbar" toggleable>
-      <b-navbar-toggle target="nav_text_collapse"></b-navbar-toggle>
-      <router-link to="/">
-        <logo/>
+  <div>
+    <md-toolbar>
+      <div style="flex: 1">
+        <router-link to="/">
+          <logo/>
+        </router-link>
+      </div>
+
+      <router-link to="/players">
+        <md-button class="md-raised register">Register</md-button>
       </router-link>
 
-      <router-link to="/draft">
-       <b-nav-text class="list">Register</b-nav-text>
-      </router-link>      
-    </b-navbar>
+      <md-button class="md-icon-button md-accent">
+        <md-icon>more_vert</md-icon>
+      </md-button>
+    </md-toolbar>
   </div>
 </template>
 
 <script>
-import Logo from '../components/Logo.vue'
+import Logo from "../components/Logo.vue";
 
 export default {
-  name: 'navbar',
+  name: "navbar",
   components: {
     Logo
   }
 };
 </script>
 
-<style scoped>
-.navbar {
-  background-color: #696969;
+<style>
+.title_wrapper {
+  float: left;
 }
 
-.button {
-  color: #629a92;
-  text-decoration: none;
-  border: solid white 0.1rem;
-  background-color: white;
-  padding: 0.4rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  border-radius: 1.5rem;
-}
-
-a.button {
-  text-decoration: none;
-}
-
-.list {
-    color: white;
-}
-/* rl logo styles */
-
-.l:before{
-  position: absolute;
-  content: "";
-  bottom:0;
-  background-color: #69f0ae;
-  height: 30px;
-  width: 100px;
-}
-.l:after{
-  position: absolute;
-  content: "";
-  left: 0;
-  background-color: rgba(0, 150, 136, 0.5);
-  height: 100px;
-  width: 50px;
-}
-.r:before{
-  position: absolute;
-  content: "";
-  height: 65px;
-  width: 100px;
-  border-radius: 0 30px 30px 0px;
-  background-color: #536dfe;
-}
-.r:after{
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 0;
-  left: 0;
-  border-style: solid;
-  border-width: 0 100px 100px 0px;
-  border-color: transparent transparent #448aff;
-}
-.alfa-title {
-  -webkit-transform: scale(0.6);
-  transform: scale(0.6);
-  margin: -20px;
-  width: 100px;
-  height: 100px;
-  display: inline-block;
-  position: relative;
-}
-
-@media (min-width:480px) {
-  .title_wrapper{
-    width: 20%;
-    margin: 0 auto;
-  }
-}
-@media (min-width:768px) {
-  .title_wrapper{
-    width: 200px;
-    margin: 0 auto;
+@media only screen and (max-width: 600px) {
+  .register {
+    display: none;
   }
 }
 </style>

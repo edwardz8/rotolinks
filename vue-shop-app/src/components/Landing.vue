@@ -1,43 +1,36 @@
 <template>
-  
-     <section>
+  <section>
     <div>
-      <div class="logo"> 
-      <logo/>
+      <div class="logo">
+        <logo/>
       </div>
-      <h1 class="title">
-        rotolinks
-      </h1>
-      <h2 class="subtitle">
-        fantasy golf draft app
-      </h2>
+      <h1 class="title">rotolinks</h1>
+      <h2 class="subtitle">fantasy golf draft app</h2>
       <div class="links">
-         <router-link to="/draft">
-                 <b-button>Draft Lobby</b-button>
-         </router-link>
+        <md-button to="/draft" class="md-raised">Draft Lobby</md-button>
+        <md-button to="/draft" class="md-raised">Join</md-button>
       </div>
     </div>
   </section>
 
-    <!-- <div class="head">
+  <!-- <div class="head">
      <router-link to="/draft" class="button">Enter Draft Lobby</router-link>
       <b-img class="phone" src="/static/img/assets/golf-v3.gif" fluid />
     </div>
     <div class="body">
-    </div> -->
+  </div>-->
 </template>
 
 
 <script>
-import Logo from '../components/Logo.vue'
+import Logo from "../components/Logo.vue";
 
 export default {
-  name: 'landing',
+  name: "landing",
   components: {
     Logo
   },
-  methods: {
-  }
+  methods: {}
 };
 </script>
 
@@ -48,7 +41,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background-color: #2a2a2a;
 }
 .title {
   font-weight: 300;
@@ -56,8 +49,8 @@ section {
   color: #28ffb7;
   letter-spacing: 1px;
   text-align: center;
-  margin-top: 1rem;
-  padding: 15px;
+  margin-top: 5rem;
+  padding-top: 15px;
 }
 .logo {
   margin: auto;
@@ -68,15 +61,12 @@ section {
   font-size: 20px;
   color: #4a86fd;
   word-spacing: 5px;
-  padding: 15px;
 }
 
 .links {
-  padding-top: 8px;
-  margin: auto;
-  width: 50%;
+  display: flex;
+  flex-direction: row;
 }
-
 
 /* .button {
   color: #629a92;
