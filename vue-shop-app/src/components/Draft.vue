@@ -87,6 +87,7 @@
     <div class="md-layout-item col-right">
 
     </div>
+
   </div>
 
 </template>

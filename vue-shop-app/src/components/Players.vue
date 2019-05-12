@@ -156,6 +156,10 @@ export default {
 .card:hover {
   background-color: #696969;
 }
+.md-card-header-text {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
 .queue {
   text-align: center;
 }
