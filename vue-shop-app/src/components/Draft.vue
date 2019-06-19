@@ -18,7 +18,7 @@
         <router-link to="/players">
         <md-button class="md-raised">Enter Draft</md-button>
         </router-link>
-        <span><strong>Payout: $300</strong></span>
+        <span><strong>Payout: $246</strong></span>
       </md-card-actions>
     </md-card>
 

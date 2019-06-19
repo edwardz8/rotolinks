@@ -23,17 +23,12 @@ export default new Router({
     {
       path: '/players',
       name: 'players',
-      component: Players
+      component: Players,
     },
-    {
-      path: '/players:id',
-      name: 'players-profile',
+     {
+      path: '/players/:id',
+      name: 'players-id',
       component: PlayerProfile
-    },
-    {
-      path: '/shop',
-      name: 'shop',
-      component: Shop
     },
     {
       path: '/draft',

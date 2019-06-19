@@ -12,13 +12,6 @@
       </div>
     </div>
   </section>
-
-  <!-- <div class="head">
-     <router-link to="/draft" class="button">Enter Draft Lobby</router-link>
-      <b-img class="phone" src="/static/img/assets/golf-v3.gif" fluid />
-    </div>
-    <div class="body">
-  </div>-->
 </template>
 
 

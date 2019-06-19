@@ -1,30 +1,47 @@
 <template>
-  <div id="app">
-    <div class="top-half">
-      <img src="../../static/img/assets/brooks_koepka.svg">
-
-      <canvas id="radar-chart"></canvas>
+  <div class="container">
+    <div>
+      <div v-for="(player, index) in players" :key="index">
+      <div v-if="id === player.id" class="profile">
+        <img class="img">
+      </div>
+      </div>
+        <h2>{{ this.$route.params.id }}</h2>
     </div>
-
-    <div class="bottom-half"></div>
   </div>
 </template>
 
 <script>
 import Chart from "chart.js";
-
+/* import polarAreaData from "../polar-area-data.js";
+ */
+/*  import barChartData from "../bar-chart-data.js";
+ */
 export default {
-  name: "player-profile",
+  name: "players-id",
   components: {
-    Chart
-  }
+    /* Chart */
+  },
+  data() {
+    return {
+      id: this.$route.params.id,
+      players: [],
+    }
+  },
+  methods: {
+  },
 };
 </script>
 
 <style scoped>
-.top-half {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+.container {
+  background-color: #f6f6f6;
+  height: 100vh;
+}
+.img {
+  width: 16rem;
+}
+h2 {
+  color: black;
 }
 </style>
