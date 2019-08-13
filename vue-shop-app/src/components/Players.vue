@@ -1,54 +1,49 @@
 <template>
   <div class="md-layout container">
-    <div class="md-layout-item">
-      <div v-for="(player, index) in players" :key="index">
-        <md-card class="card" md-with-hover>
-          <md-card-header>
-            <md-card-media md-big>
-              <img :src="player.img" height="12rem">
-            </md-card-media>
+    <div v-for="(player, index) in players" :key="index" class="md-layout md-gutter">
+      <md-card class="md-layout-item card" md-with-hover>
+        <md-card-media md-big>
+          <img :src="player.img" />
+        </md-card-media>
 
-            <md-card-header-text>
-              <div class="md-title">{{player.name}}</div>
-              <div class="md-subhead">WGR: {{player.rank}}</div>
-              <md-icon class="md-accent">trending_up</md-icon>
-            </md-card-header-text>
-          </md-card-header>
+        <md-card-header-text>
+          <div class="md-title">{{player.name}}</div>
+          <div class="md-subhead">WGR: {{player.rank}}</div>
+          <md-icon class="md-accent">trending_up</md-icon>
+        </md-card-header-text>
 
-          <md-card-actions class="actions">
-            <!-- <md-button class="md-raised md-accent">
+        <md-card-actions class="actions">
+          <!-- Links to Golfer Profile -->
+          <!-- <md-button class="md-raised md-accent">
             <router-link v-if="player.id" :to="{name: 'players-id', params: { id: player.name }}">
               Player Profile
             </router-link>
-            </md-button> -->
-
-            <md-button class="md-raised md-accent" @click="addToQueue(player)">Add to Play</md-button>
-          </md-card-actions>
-        </md-card>
-      </div>
+          </md-button>-->
+          <md-button class="md-raised md-accent btn" @click="addToQueue(player)">Add to Play</md-button>
+        </md-card-actions>
+      </md-card>
     </div>
+
     <!-- Right Column -->
-    <div class="md-layout-item col-right">
-      <div class="queue">
-        <h2>Draft Queue</h2>
+    <div class="queue">
+      <h2>Draft Queue</h2>
 
-        <md-list v-for="item in queue" v-bind:key="item.id" class="md-primary list">
-          <md-list-item>
-            <div>
-              <md-avatar class="md-large">
-                <img :src="item.img">
-              </md-avatar>
-              <span>{{ item.name }}</span>
-            </div>
-            <span @click="removeItem(item)" class="x">x</span>
-          </md-list-item>
-        </md-list>
+      <md-list v-for="item in queue" v-bind:key="item.id" class="md-primary list">
+        <md-list-item>
+          <div>
+            <md-avatar class="md-large">
+              <img :src="item.img" />
+            </md-avatar>
+            <span>{{ item.name }}</span>
+          </div>
+          <span @click="removeItem(item)" class="x">x</span>
+        </md-list-item>
+      </md-list>
 
-        <div v-if="queue.length">
-          <md-button class="md-raised md-accent">Draft Team</md-button>
-        </div>
-        <div v-else class="plays">No Favorite Plays</div>
+      <div v-if="queue.length">
+        <md-button class="md-raised md-accent">Draft Team</md-button>
       </div>
+      <div v-else class="plays">No Favorite Plays</div>
     </div>
   </div>
 </template>
@@ -63,8 +58,8 @@ export default {
       img: this.$route.params.img,
       total: 0,
       players: [
-         {
-          name: "Francesco_Molinari",
+        {
+          name: "Francesco Molinari",
           id: 12,
           country: "",
           rank: "9th",
@@ -83,6 +78,13 @@ export default {
           country: "",
           rank: "20th",
           img: "/static/img/assets/Jordan_Spieth.svg"
+        },
+        {
+          name: "Rickie Fowler",
+          id: 23,
+          country: "",
+          rank: "20th",
+          img: "/static/img/assets/Rickie_Fowler.svg"
         },
         {
           name: "Tiger Woods",
@@ -196,6 +198,34 @@ export default {
           rank: "20th",
           img: "/static/img/assets/Paul_Casey.svg"
         },
+        {
+          name: "Adam Scott",
+          id: 19,
+          country: "",
+          rank: "20th",
+          img: "/static/img/assets/Adam_Scott.svg"
+        },
+        {
+          name: "Gary Woodland",
+          id: 20,
+          country: "",
+          rank: "20th",
+          img: "/static/img/assets/Gary_Woodland.svg"
+        },
+        {
+          name: "Henrik Stenson",
+          id: 21,
+          country: "",
+          rank: "20th",
+          img: "/static/img/assets/Henrik_Stenson.svg"
+        },
+        {
+          name: "Hideki Matsuyama",
+          id: 22,
+          country: "",
+          rank: "20th",
+          img: "/static/img/assets/Hideki_Matsuyama.svg"
+        }
       ],
       queue: [],
       search: ""
@@ -235,14 +265,14 @@ export default {
   background-color: #191919;
 }
 .card {
-  margin: 1rem;
+  margin: 2rem;
+  max-width: 15rem;
+  min-width: 12rem;
+  height: 20rem;
+  position: relative;
 }
 .card:hover {
   background-color: #4c4c4c;
-}
-.md-card-header-text {
-  margin-top: 1rem;
-  margin-left: 1rem;
 }
 .queue {
   text-align: center;
@@ -258,10 +288,11 @@ h2,
 .plays {
   color: white;
 }
-.col-right {
-  /* position: sticky -- doesnt work */
-}
 .add-btn {
   margin-left: 2rem;
+}
+.btn {
+  position: absolute;
+  bottom: 10px;
 }
 </style>

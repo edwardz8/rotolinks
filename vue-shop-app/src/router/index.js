@@ -6,6 +6,7 @@ import Players from '@/components/Players'
 import PlayerProfile from '@/components/PlayerProfile'
 import Register from '@/components/Register'
 import Draft from '@/components/Draft'
+import Leaderboard from '@/components/Leaderboard'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/draft',
       name: 'draft',
       component: Draft
+    },
+    {
+      path: '/leaderboard',
+      name: 'leaderboard',
+      component: Leaderboard
     }
   ]
 })
