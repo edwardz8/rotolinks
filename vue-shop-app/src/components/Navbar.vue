@@ -3,7 +3,7 @@
     <md-toolbar>
       <div style="flex: 1">
         <router-link to="/">
-          <logo/>
+          <logo />
         </router-link>
       </div>
 
@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import Logo from "../components/Logo.vue";
+import Logo from "@/components/Logo.vue";
 
 export default {
   name: "navbar",

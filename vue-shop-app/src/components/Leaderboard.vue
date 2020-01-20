@@ -1,16 +1,18 @@
 <template>
   <div id="app">
     <div v-for="result in results" :key="result.players" class="list">
-      <h2>RotoLinks {{ result.Tour }} Leaderboard</h2>
-      <h3>{{ result.Tournament }} at {{ result.Course }}</h3>
-      <div class="md-layout md-gutter">
-        <md-card v-for="player in result.Players" :key="player.Name" class="md-layout-item card">
-            <img src="../../static/img/assets/Jordan_Spieth.svg" height="13rem">
-          <p>{{ player.Name }}</p>
-          <p>Current Position: {{ player.CurrentPosition }}</p>
-          <p>Total Score: {{ player.Total }}</p>
-          <p>Total Strokes: {{ player.TotalStrokes }}</p>
-        </md-card>
+      <div v-if="result.Tour === 'European Tour'">
+        <h2>RotoLinks {{ result.Tour }} Leaderboard</h2>
+        <!-- <h3>{{ result.Tournament }} at {{ result.Course }}</h3> -->
+        <div class="md-layout md-gutter">
+          <md-card v-for="player in result.Players" :key="player.Name" class="md-layout-item card">
+            <img :src="matchPlayerPhoto(player.Name)" height="13rem" />
+            <p>{{ player.Name }}</p>
+            <p>Current Position: {{ player.CurrentPosition }}</p>
+            <p>Total Score: {{ player.Total }}</p>
+            <p>Total Strokes: {{ player.TotalStrokes }}</p>
+          </md-card>
+        </div>
       </div>
     </div>
     <!-- <Table/> -->
@@ -19,6 +21,7 @@
 
 <script>
 import axios from "axios";
+import methods from "../../methods";
 
 export default {
   name: "leaderboard",
@@ -28,12 +31,9 @@ export default {
       players: []
     };
   },
-  /* methods() {
-    // match name from api with correct image path ???
-    if (this.players.name) {
-      return null;
-    }
-  }, */
+  methods: {
+    ...methods
+  },
   mounted() {
     debugger;
     console.log("mounted");
@@ -56,13 +56,14 @@ export default {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: #ededed;
 }
-body {
+/* body {
   background-color: #ededed;
-}
-h2, h3 {
-    text-align: center;
+} */
+h2,
+h3 {
+  text-align: center;
 }
 .list {
   margin: 3rem;

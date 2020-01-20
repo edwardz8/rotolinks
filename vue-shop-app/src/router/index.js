@@ -1,9 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Shop from '@/components/Shop'
 import Landing from '@/components/Landing'
 import Players from '@/components/Players'
-import PlayerProfile from '@/components/PlayerProfile'
 import Register from '@/components/Register'
 import Draft from '@/components/Draft'
 import Leaderboard from '@/components/Leaderboard'
@@ -25,11 +23,6 @@ export default new Router({
       path: '/players',
       name: 'players',
       component: Players,
-    },
-     {
-      path: '/players/:id',
-      name: 'players-id',
-      component: PlayerProfile
     },
     {
       path: '/draft',
