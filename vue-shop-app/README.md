@@ -1,6 +1,6 @@
-# vue-shop-app
+# rotolinks
 
-> shopping cart vue application
+> rotolinks vue application
 
 ## Build Setup
 
