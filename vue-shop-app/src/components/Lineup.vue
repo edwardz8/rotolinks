@@ -4,7 +4,7 @@
       <md-card-header class="card-heading">
         <div class="md-title" style="flex: 1">
           Current Lineup
-          <span>(0/6)</span>
+          <!-- <span>(0/6)</span> -->
         </div>
       </md-card-header>
 
@@ -19,21 +19,18 @@
             <p class="drafted-player-name">{{ draftee.player_name }}</p>
           </div>
 
-          <md-button
-            @click="removeGolfer(index)"
-            class="md-icon-button md-list-action"
-          >
-            <md-icon class="md-primary">{{
+          <md-button @click="removeGolfer(index)" class="md-icon-button md-list-action">
+            <md-icon class="md-primary">
+              {{
               vacant ? "indeterminate_check_box" : "add"
-            }}</md-icon>
+              }}
+            </md-icon>
           </md-button>
         </md-list-item>
       </md-list>
 
       <md-card-actions>
-        <md-button class="md-raised md-primary" @click="clearLineup()"
-          >Clear</md-button
-        >
+        <md-button class="md-raised md-primary" @click="clearLineup()">Clear</md-button>
         <md-button class="md-raised md-accent">
           <md-icon>sports_golf</md-icon>Submit Lineup
         </md-button>
@@ -42,19 +39,7 @@
   </div>
 </template>
 
-<!-- 
-        <md-list-item>
-          <div>
-            <md-avatar class="md-large">
-              <img :src="draftee.img" />
-            </md-avatar>
-            <span>{{ draftee.name }}</span>
-          </div>
-          <span class="x">x</span>
-        </md-list-item>
-      </md-list> -->
-
-<!--   <div v-if="lineup.length">
+<!--  <div v-if="lineup.length">
         <md-button class="md-raised md-accent">Draft Team</md-button>
       </div>
       <div v-else class="plays">Add Golfers to Draft</div>-->
@@ -103,6 +88,8 @@ export default {
   margin-top: 2rem;
   position: sticky;
   top: 2rem;
+  max-height: 50rem;
+  min-height: 50rem;
 }
 .drafted-player-name {
   padding-top: 1rem;
