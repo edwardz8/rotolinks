@@ -28,6 +28,9 @@ export default {
       case "Bryson DeChambeau":
         return "./static/img/assets/Bryson_DeChambeau.svg";
         break;
+      case "Bryson DECHAMBEAU":
+        return "./static/img/assets/Bryson_DeChambeau.svg";
+        break;
       case "Paul Casey":
         return "./static/img/assets/Paul_Casey.svg";
         break;

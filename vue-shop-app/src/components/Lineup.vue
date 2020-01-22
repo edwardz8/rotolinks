@@ -101,6 +101,8 @@ export default {
   margin-left: 2rem;
   margin-right: 2rem;
   margin-top: 2rem;
+  position: sticky;
+  top: 2rem;
 }
 .drafted-player-name {
   padding-top: 1rem;

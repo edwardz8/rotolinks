@@ -1,6 +1,6 @@
 [{
     "player_name": "Rory McIlroy",
-    "dg_index": "N/A",
+    "id": 1,
     "dg_rank": 1,
     "dg_last_week": 1,
     "owgr_rank": 2,
@@ -8,7 +8,7 @@
   },
   {
     "player_name": "Jon Rahm",
-    "dg_index": "N/A",
+    "id": 2,
     "dg_rank": 2,
     "dg_last_week": 2,
     "owgr_rank": 3,
@@ -16,7 +16,7 @@
   },
   {
     "player_name": "Justin Thomas",
-    "dg_index": "N/A",
+    "id": 3,
     "dg_rank": 3,
     "dg_last_week": 3,
     "owgr_rank": 4,
@@ -24,7 +24,7 @@
   },
   {
     "player_name": "Webb Simpson",
-    "dg_index": "N/A",
+    "id": 4,
     "dg_rank": 4,
     "dg_last_week": 4,
     "owgr_rank": 11,
@@ -32,7 +32,7 @@
   },
   {
     "player_name": "Hideki Matsuyama",
-    "dg_index": "N/A",
+    "id": 5,
     "dg_rank": 5,
     "dg_last_week": 5,
     "owgr_rank": 21,
@@ -40,7 +40,7 @@
   },
   {
     "player_name": "Xander Schauffele",
-    "dg_index": "N/A",
+    "id": 6,
     "dg_rank": 6,
     "dg_last_week": 6,
     "owgr_rank": 8,
@@ -48,23 +48,23 @@
   },
   {
     "player_name": "Tiger Woods",
-    "dg_index": "N/A",
+    "id": 7,
     "dg_rank": 7,
     "dg_last_week": 7,
     "owgr_rank": 7,
-    "owgr_last_week": 7
+    "owgr_last_week": 8
   },
   {
     "player_name": "Patrick Cantlay",
-    "dg_index": "N/A",
+    "id": 8,
     "dg_rank": 8,
     "dg_last_week": 8,
     "owgr_rank": 6,
-    "owgr_last_week": 6
+    "owgr_last_week": 7
   },
   {
     "player_name": "Tommy Fleetwood",
-    "dg_index": "N/A",
+    "id": 9,
     "dg_rank": 9,
     "dg_last_week": 10,
     "owgr_rank": 10,
@@ -72,7 +72,7 @@
   },
   {
     "player_name": "Adam Scott",
-    "dg_index": "N/A",
+    "id": 10,
     "dg_rank": 10,
     "dg_last_week": 11,
     "owgr_rank": 13,
@@ -80,7 +80,7 @@
   },
   {
     "player_name": "Patrick Reed",
-    "dg_index": "N/A",
+    "id": 11,
     "dg_rank": 11,
     "dg_last_week": 9,
     "owgr_rank": 12,
@@ -88,7 +88,7 @@
   },
   {
     "player_name": "Brooks Koepka",
-    "dg_index": "N/A",
+    "id": 12,
     "dg_rank": 12,
     "dg_last_week": 12,
     "owgr_rank": 1,
@@ -96,7 +96,7 @@
   },
   {
     "player_name": "Louis Oosthuizen",
-    "dg_index": "N/A",
+    "id": 13,
     "dg_rank": 13,
     "dg_last_week": 15,
     "owgr_rank": 18,
@@ -104,7 +104,7 @@
   },
   {
     "player_name": "Rickie Fowler",
-    "dg_index": "N/A",
+    "id": 14,
     "dg_rank": 14,
     "dg_last_week": 13,
     "owgr_rank": 22,
@@ -112,7 +112,7 @@
   },
   {
     "player_name": "Justin Rose",
-    "dg_index": "N/A",
+    "id": 15,
     "dg_rank": 15,
     "dg_last_week": 14,
     "owgr_rank": 9,
@@ -120,7 +120,7 @@
   },
   {
     "player_name": "Gary Woodland",
-    "dg_index": "N/A",
+    "id": 16,
     "dg_rank": 16,
     "dg_last_week": 16,
     "owgr_rank": 14,
@@ -128,7 +128,7 @@
   },
   {
     "player_name": "Dustin Johnson",
-    "dg_index": "N/A",
+    "id": 17,
     "dg_rank": 17,
     "dg_last_week": 17,
     "owgr_rank": 5,
@@ -136,7 +136,7 @@
   },
   {
     "player_name": "Paul Casey",
-    "dg_index": "N/A",
+    "id": 18,
     "dg_rank": 18,
     "dg_last_week": 19,
     "owgr_rank": 17,
@@ -144,7 +144,7 @@
   },
   {
     "player_name": "Collin Morikawa",
-    "dg_index": "N/A",
+    "id": 19,
     "dg_rank": 19,
     "dg_last_week": 18,
     "owgr_rank": 53,
@@ -152,7 +152,7 @@
   },
   {
     "player_name": "Sungjae Im",
-    "dg_index": "N/A",
+    "id": 20,
     "dg_rank": 20,
     "dg_last_week": 21,
     "owgr_rank": 35,
@@ -160,7 +160,7 @@
   },
   {
     "player_name": "Henrik Stenson",
-    "dg_index": "N/A",
+    "id": 21,
     "dg_rank": 21,
     "dg_last_week": 20,
     "owgr_rank": 26,
@@ -168,7 +168,7 @@
   },
   {
     "player_name": "Bryson DeChambeau",
-    "dg_index": "N/A",
+    "id": 22,
     "dg_rank": 22,
     "dg_last_week": 22,
     "owgr_rank": 16,
@@ -176,7 +176,7 @@
   },
   {
     "player_name": "Billy Horschel",
-    "dg_index": "N/A",
+    "id": 23,
     "dg_rank": 23,
     "dg_last_week": 23,
     "owgr_rank": 36,
@@ -184,7 +184,7 @@
   },
   {
     "player_name": "Matthew Fitzpatrick",
-    "dg_index": "N/A",
+    "id": 24,
     "dg_rank": 24,
     "dg_last_week": 25,
     "owgr_rank": 25,
@@ -192,7 +192,7 @@
   },
   {
     "player_name": "Byeong Hun An",
-    "dg_index": "N/A",
+    "id": 25,
     "dg_rank": 25,
     "dg_last_week": 26,
     "owgr_rank": 44,
@@ -200,7 +200,7 @@
   },
   {
     "player_name": "Viktor Hovland",
-    "dg_index": "N/A",
+    "id": 26,
     "dg_rank": 26,
     "dg_last_week": 24,
     "owgr_rank": 94,
@@ -208,7 +208,7 @@
   },
   {
     "player_name": "Brandt Snedeker",
-    "dg_index": "N/A",
+    "id": 27,
     "dg_rank": 28,
     "dg_last_week": 32,
     "owgr_rank": 47,
@@ -216,7 +216,7 @@
   },
   {
     "player_name": "Tyrrell Hatton",
-    "dg_index": "N/A",
+    "id": 28,
     "dg_rank": 30,
     "dg_last_week": 30,
     "owgr_rank": 34,
@@ -224,7 +224,7 @@
   },
   {
     "player_name": "Corey Conners",
-    "dg_index": "N/A",
+    "id": 29,
     "dg_rank": 31,
     "dg_last_week": 35,
     "owgr_rank": 56,
@@ -232,7 +232,7 @@
   },
   {
     "player_name": "Abraham Ancer",
-    "dg_index": "N/A",
+    "id": 30,
     "dg_rank": 32,
     "dg_last_week": 31,
     "owgr_rank": 39,
@@ -240,7 +240,7 @@
   },
   {
     "player_name": "Charles Howell III",
-    "dg_index": "N/A",
+    "id": 31,
     "dg_rank": 33,
     "dg_last_week": 40,
     "owgr_rank": 57,
@@ -248,7 +248,7 @@
   },
   {
     "player_name": "Vaughn Taylor",
-    "dg_index": "N/A",
+    "id": 32,
     "dg_rank": 34,
     "dg_last_week": 44,
     "owgr_rank": 98,
@@ -256,7 +256,7 @@
   },
   {
     "player_name": "Shane Lowry",
-    "dg_index": "N/A",
+    "id": 33,
     "dg_rank": 35,
     "dg_last_week": 33,
     "owgr_rank": 19,
@@ -264,7 +264,7 @@
   },
   {
     "player_name": "Tony Finau",
-    "dg_index": "N/A",
+    "id": 34,
     "dg_rank": 36,
     "dg_last_week": 34,
     "owgr_rank": 15,
@@ -272,7 +272,7 @@
   },
   {
     "player_name": "Joaquin Niemann",
-    "dg_index": "N/A",
+    "id": 35,
     "dg_rank": 37,
     "dg_last_week": 29,
     "owgr_rank": 54,
@@ -280,7 +280,7 @@
   },
   {
     "player_name": "Kevin Kisner",
-    "dg_index": "N/A",
+    "id": 36,
     "dg_rank": 38,
     "dg_last_week": 52,
     "owgr_rank": 30,
@@ -288,7 +288,7 @@
   },
   {
     "player_name": "Scottie Scheffler",
-    "dg_index": "N/A",
+    "id": 37,
     "dg_rank": 39,
     "dg_last_week": 36,
     "owgr_rank": 66,
@@ -296,7 +296,7 @@
   },
   {
     "player_name": "Denny McCarthy",
-    "dg_index": "N/A",
+    "id": 38,
     "dg_rank": 40,
     "dg_last_week": 39,
     "owgr_rank": 146,
@@ -304,7 +304,7 @@
   },
   {
     "player_name": "Jason Day",
-    "dg_index": "N/A",
+    "id": 39,
     "dg_rank": 41,
     "dg_last_week": 41,
     "owgr_rank": 40,
@@ -312,23 +312,15 @@
   },
   {
     "player_name": "Rafa Cabrera Bello",
-    "dg_index": "N/A",
+    "id": 40,
     "dg_rank": 42,
     "dg_last_week": 42,
     "owgr_rank": 42,
     "owgr_last_week": 41
   },
   {
-    "player_name": "Jason Kokrak",
-    "dg_index": "N/A",
-    "dg_rank": 43,
-    "dg_last_week": 43,
-    "owgr_rank": 64,
-    "owgr_last_week": 64
-  },
-  {
     "player_name": "Cameron Smith",
-    "dg_index": "N/A",
+    "id": 41,
     "dg_rank": 44,
     "dg_last_week": 65,
     "owgr_rank": 31,
@@ -336,7 +328,7 @@
   },
   {
     "player_name": "Matt Kuchar",
-    "dg_index": "N/A",
+    "id": 42,
     "dg_rank": 45,
     "dg_last_week": 38,
     "owgr_rank": 24,
@@ -344,7 +336,7 @@
   },
   {
     "player_name": "Ryan Palmer",
-    "dg_index": "N/A",
+    "id": 43,
     "dg_rank": 46,
     "dg_last_week": 61,
     "owgr_rank": 71,
@@ -352,7 +344,7 @@
   },
   {
     "player_name": "J.T. Poston",
-    "dg_index": "N/A",
+    "id": 44,
     "dg_rank": 47,
     "dg_last_week": 37,
     "owgr_rank": 67,
@@ -360,7 +352,7 @@
   },
   {
     "player_name": "Jim Furyk",
-    "dg_index": "N/A",
+    "id": 45,
     "dg_rank": 48,
     "dg_last_week": 47,
     "owgr_rank": 61,
@@ -368,7 +360,7 @@
   },
   {
     "player_name": "Sergio Garcia",
-    "dg_index": "N/A",
+    "id": 46,
     "dg_rank": 52,
     "dg_last_week": 51,
     "owgr_rank": 41,
@@ -376,7 +368,7 @@
   },
   {
     "player_name": "Marc Leishman",
-    "dg_index": "N/A",
+    "id": 47,
     "dg_rank": 58,
     "dg_last_week": 60,
     "owgr_rank": 28,
@@ -384,7 +376,7 @@
   },
   {
     "player_name": "Bernd Wiesberger",
-    "dg_index": "N/A",
+    "id": 48,
     "dg_rank": 59,
     "dg_last_week": 57,
     "owgr_rank": 23,
@@ -392,7 +384,7 @@
   },
   {
     "player_name": "Sebastian Munoz",
-    "dg_index": "N/A",
+    "id": 49,
     "dg_rank": 60,
     "dg_last_week": 53,
     "owgr_rank": 104,
@@ -400,7 +392,7 @@
   },
   {
     "player_name": "Jordan Spieth",
-    "dg_index": "N/A",
+    "id": 50,
     "dg_rank": 62,
     "dg_last_week": 58,
     "owgr_rank": 43,
@@ -408,7 +400,7 @@
   },
   {
     "player_name": "Brian Harman",
-    "dg_index": "N/A",
+    "id": 51,
     "dg_rank": 67,
     "dg_last_week": 71,
     "owgr_rank": 123,
@@ -416,7 +408,7 @@
   },
   {
     "player_name": "Alex Noren",
-    "dg_index": "N/A",
+    "id": 52,
     "dg_rank": 68,
     "dg_last_week": 73,
     "owgr_rank": 82,
@@ -424,7 +416,7 @@
   },
   {
     "player_name": "Thomas Pieters",
-    "dg_index": "N/A",
+    "id": 53,
     "dg_rank": 70,
     "dg_last_week": 69,
     "owgr_rank": 85,
@@ -432,7 +424,7 @@
   },
   {
     "player_name": "Emiliano Grillo",
-    "dg_index": "N/A",
+    "id": 54,
     "dg_rank": 73,
     "dg_last_week": 81,
     "owgr_rank": 110,
@@ -440,7 +432,7 @@
   },
   {
     "player_name": "Francesco Molinari",
-    "dg_index": "N/A",
+    "id": 55,
     "dg_rank": 74,
     "dg_last_week": 75,
     "owgr_rank": 20,
@@ -448,7 +440,7 @@
   },
   {
     "player_name": "Matthew Wolff",
-    "dg_index": "N/A",
+    "id": 56,
     "dg_rank": 78,
     "dg_last_week": 64,
     "owgr_rank": 102,
@@ -456,7 +448,7 @@
   },
   {
     "player_name": "Thorbjorn Olesen",
-    "dg_index": "N/A",
+    "id": 57,
     "dg_rank": 81,
     "dg_last_week": 80,
     "owgr_rank": 99,
@@ -464,7 +456,7 @@
   },
   {
     "player_name": "Nick Taylor",
-    "dg_index": "N/A",
+    "id": 58,
     "dg_rank": 82,
     "dg_last_week": 88,
     "owgr_rank": 229,
@@ -472,7 +464,7 @@
   },
   {
     "player_name": "Pat Perez",
-    "dg_index": "N/A",
+    "id": 59,
     "dg_rank": 83,
     "dg_last_week": 83,
     "owgr_rank": 125,
@@ -480,7 +472,7 @@
   },
   {
     "player_name": "Keegan Bradley",
-    "dg_index": "84",
+    "id": 60,
     "dg_rank": 84,
     "dg_last_week": 98,
     "owgr_rank": 50,
@@ -488,7 +480,7 @@
   },
   {
     "player_name": "Ryan Moore",
-    "dg_index": "N/A",
+    "id": 61,
     "dg_rank": 85,
     "dg_last_week": 82,
     "owgr_rank": 105,

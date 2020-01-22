@@ -14,7 +14,16 @@
           <md-card-header-text>
             <div class="md-title">{{ golfer.player_name }}</div>
             <div class="md-subhead">WGR: {{ golfer.owgr_rank }}</div>
-            <md-icon class="md-accent">trending_up</md-icon>
+            <md-icon
+              class="md-accent"
+              v-if="golfer.dg_rank <= golfer.owgr_last_week"
+              >trending_up</md-icon
+            >
+            <md-icon
+              class="md-accent"
+              v-if="golfer.dg_rank >= golfer.owgr_last_week"
+              >trending_down</md-icon
+            >
           </md-card-header-text>
 
           <md-card-actions class="actions">
@@ -58,8 +67,7 @@ export default {
     ...mapActions(["addGolferToLineup", "currentGolfer", "isDisabled"]),
     viewCurrentGolfer(golfer) {
       this.currentGolfer(golfer);
-    },
-    isDisabled(golfer) {}
+    }
   },
   components: {
     lineup
