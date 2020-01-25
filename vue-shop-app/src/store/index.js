@@ -8,6 +8,7 @@ export default new Vuex.Store({
   state: {
     // golfer data
     golfers,
+    // inCart
     currentLineup: [],
     currentGolfer: {},
   },
@@ -15,7 +16,7 @@ export default new Vuex.Store({
     // golfers
     getGolfers: state => state.golfers,
     getCurrentGolfer: state => state.currentGolfer,
-    getDraftees: state => state.currentLineup,
+    getCurrentLineup: state => state.currentLineup,
   },
   mutations: {
     // mutations are responsible for state changes
@@ -29,6 +30,7 @@ export default new Vuex.Store({
       state.golfers = val
     },
     ADD_GOLFER_TO_LINEUP(state, golfer) {
+      golfer.disablePlayer = true;
       state.currentLineup.unshift(golfer);
       if (state.currentLineup.length > 6) {
         state.currentLineup.length = 6

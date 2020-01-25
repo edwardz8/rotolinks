@@ -8,10 +8,10 @@
         </div>
       </md-card-header>
 
-      <md-list class="md-triple-line">
+      <md-list class="md-triple-line" v-if="getCurrentLineup.length">
         <!-- Golfer -->
-        <md-list-item v-for="(draftee, index) in getDraftees" :key="index">
-          <div>G</div>
+        <md-list-item v-for="(draftee, index) in getCurrentLineup" :key="index">
+          <div class="g">G</div>
           <div class="md-list-item-text">
             <md-avatar class="md-large">
               <img :src="matchPlayerPhoto(draftee.player_name)" />
@@ -29,20 +29,21 @@
         </md-list-item>
       </md-list>
 
+      <div v-else class="plays">Add Golfers to Lineup</div>
+
       <md-card-actions>
         <md-button class="md-raised md-primary" @click="clearLineup()">Clear</md-button>
-        <md-button class="md-raised md-accent">
+        <md-button
+          class="md-raised md-accent"
+          @click="submitLineup()"
+          :disabled="getCurrentLineup.length < 6"
+        >
           <md-icon>sports_golf</md-icon>Submit Lineup
         </md-button>
       </md-card-actions>
     </md-card>
   </div>
 </template>
-
-<!--  <div v-if="lineup.length">
-        <md-button class="md-raised md-accent">Draft Team</md-button>
-      </div>
-      <div v-else class="plays">Add Golfers to Draft</div>-->
 
 <script>
 import methods from "../../methods";
@@ -56,7 +57,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["getDraftees"])
+    ...mapGetters(["getCurrentLineup", "getGolfers"])
   },
   methods: {
     ...methods,
@@ -65,7 +66,17 @@ export default {
       "currentGolfer",
       "removeGolfer",
       "clearLineup"
-    ])
+    ]),
+    submitLineup() {
+      if (this.$store.getters.getCurrentLineup) {
+        return this.$store.getters.getCurrentLineup.map(lineup => {
+          return this.$store.getters.getGolfers.find(availablePlayers => {
+            return lineup === availablePlayers.id;
+          });
+        });
+      }
+      console.log(this.$store.getters.getCurrentLineup);
+    }
   }
 };
 </script>
@@ -101,5 +112,12 @@ export default {
 }
 .md-list.md-triple-line .md-list-item-content {
   min-height: initial;
+}
+.plays {
+  color: lime;
+  padding: 1rem;
+}
+.g {
+  color: lime;
 }
 </style>

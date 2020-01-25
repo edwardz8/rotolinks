@@ -1,11 +1,7 @@
 <template>
   <div class="md-layout container">
     <div class="column-left md-layout md-gutter">
-      <div
-        v-for="(golfer, index) in golfers"
-        :key="index"
-        class="md-layout md-gutter"
-      >
+      <div v-for="(golfer, index) in golfers" :key="index" class="md-layout md-gutter">
         <md-card class="md-layout-item card" md-with-hover>
           <md-card-media md-big>
             <img :src="matchPlayerPhoto(golfer.player_name)" />
@@ -14,25 +10,16 @@
           <md-card-header-text>
             <div class="md-title">{{ golfer.player_name }}</div>
             <div class="md-subhead">WGR: {{ golfer.owgr_rank }}</div>
-            <md-icon
-              class="md-accent"
-              v-if="golfer.dg_rank <= golfer.owgr_last_week"
-              >trending_up</md-icon
-            >
-            <md-icon
-              class="md-accent"
-              v-if="golfer.dg_rank >= golfer.owgr_last_week"
-              >trending_down</md-icon
-            >
+            <md-icon class="md-accent" v-if="golfer.dg_rank <= golfer.owgr_last_week">trending_up</md-icon>
+            <md-icon class="md-accent" v-if="golfer.dg_rank >= golfer.owgr_last_week">trending_down</md-icon>
           </md-card-header-text>
 
           <md-card-actions class="actions">
             <md-button
               class="md-raised md-accent btn"
-              @click="addGolferToLineup(golfer)"
-              :disabled="isAdded"
-              >Add to Play</md-button
-            >
+              @click.once="addGolferToLineup(golfer)"
+              :disabled="golfer.disablePlayer"
+            >Add to Play</md-button>
           </md-card-actions>
         </md-card>
       </div>
@@ -55,8 +42,7 @@ export default {
   name: "players",
   data() {
     return {
-      golfers,
-      isAdded: false
+      golfers
     };
   },
   computed: {
@@ -64,7 +50,12 @@ export default {
   },
   methods: {
     ...methods,
-    ...mapActions(["addGolferToLineup", "currentGolfer", "isDisabled"]),
+    ...mapActions([
+      "addGolferToLineup",
+      "currentGolfer",
+      "currentLineup",
+      "isDisabled"
+    ]),
     viewCurrentGolfer(golfer) {
       this.currentGolfer(golfer);
     }
