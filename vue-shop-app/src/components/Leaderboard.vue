@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <div class="no-leaderboard">
+      No Live Leaderboards At This Time
+    </div>
     <div v-for="result in results" :key="result.players" class="list">
       <div v-if="result.Tour === 'European Tour'">
         <h2>RotoLinks {{ result.Tour }} Leaderboard</h2>
@@ -76,5 +79,10 @@ h3 {
 }
 .card:hover {
   background-color: #2a2a2a;
+}
+.no-leaderboard {
+  margin: 0 auto;
+  width: 50%;
+  margin-top: 1rem;
 }
 </style>

@@ -92,10 +92,7 @@ export default {
   justify-content: space-between;
 }
 .lineup {
-  max-width: 32rem;
-  min-width: 20rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  min-width: 15rem;
   margin-top: 2rem;
   position: sticky;
   top: 2rem;

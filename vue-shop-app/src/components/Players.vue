@@ -71,8 +71,9 @@ export default {
   background-color: #191919;
   justify-content: space-between;
   display: flex;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  flex-wrap: wrap-reverse;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .column-left {
   max-width: 50rem;
