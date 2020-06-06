@@ -11,11 +11,13 @@
       <md-list class="md-triple-line" v-if="getCurrentLineup.length">
         <!-- Golfer -->
         <md-list-item v-for="(draftee, index) in getCurrentLineup" :key="index">
+          <div class="card_flex">
           <div class="g">G</div>
-          <div class="md-list-item-text">
+          <div class="md-list-item-img">
             <md-avatar class="md-large">
               <img :src="matchPlayerPhoto(draftee.player_name)" />
             </md-avatar>
+          </div>
             <p class="drafted-player-name">{{ draftee.player_name }}</p>
           </div>
 
@@ -92,21 +94,11 @@ export default {
   justify-content: space-between;
 }
 .lineup {
-  min-width: 20rem;
+  min-width: 30rem;
   margin-top: 2rem;
   position: sticky;
   top: 2rem;
   max-height: 50rem;
-}
-.drafted-player-name {
-  padding-top: 1rem;
-}
-.md-list-item-text {
-  display: flex;
-  flex-direction: row;
-}
-.md-list.md-triple-line .md-list-item-content {
-  min-height: initial;
 }
 .plays {
   color: lime;
@@ -114,5 +106,16 @@ export default {
 }
 .g {
   color: lime;
+  margin-right: 2rem;
+}
+.drafted-player-name {
+  margin-top: -.2px;
+}
+.card_flex {
+  display: flex;
+}
+.md-list-item-img {
+  margin-top: -1rem;
+  margin-right: 1rem;
 }
 </style>
