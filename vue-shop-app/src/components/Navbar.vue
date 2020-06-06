@@ -11,10 +11,6 @@
         <router-link to="/leaderboard">
           <md-button class="md-raised leaderboard">Live Leaderboard</md-button>
         </router-link>
-
-        <router-link to="/players">
-          <md-button class="md-raised register">Register</md-button>
-        </router-link>
       </div>
 
       <md-button class="md-icon-button md-accent">
