@@ -92,12 +92,11 @@ export default {
   justify-content: space-between;
 }
 .lineup {
-  min-width: 15rem;
+  min-width: 20rem;
   margin-top: 2rem;
   position: sticky;
   top: 2rem;
   max-height: 50rem;
-  min-height: 50rem;
 }
 .drafted-player-name {
   padding-top: 1rem;
@@ -105,7 +104,6 @@ export default {
 .md-list-item-text {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 }
 .md-list.md-triple-line .md-list-item-content {
   min-height: initial;

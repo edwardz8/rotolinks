@@ -69,14 +69,15 @@ export default {
 <style scoped>
 .container {
   background-color: #191919;
-  justify-content: space-between;
+  justify-content: space-around;
   display: flex;
   flex-wrap: wrap-reverse;
   padding-left: 1rem;
   padding-right: 1rem;
+  max-width: 1400px;
 }
 .column-left {
-  max-width: 50rem;
+  max-width: 40rem;
 }
 .card {
   margin: 2rem;
@@ -90,7 +91,6 @@ export default {
 }
 .column-right {
   text-align: center;
-  width: 30rem;
 }
 .list {
   margin: 2rem;
